@@ -1,0 +1,53 @@
+/*#region global*/
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+}
+
+/*#endregion*/
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/*#region header*/
+
+header {
+  & nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .perfil {
+      display: flex;
+      gap: 1.5em;
+
+      .iconUser {}
+
+      .iconPlus {}
+    }
+
+    .menu {
+display: flex;
+      gap: 2em;
+      & a {
+        font-weight: bold;
+      }
+    }
+
+    .login {
+      & a {
+        
+      }
+    }
+  }
+}
+
+/*#endregion header*/
