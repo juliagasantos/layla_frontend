@@ -10,10 +10,22 @@
 }
 
 /*#endregion*/
+:root {
+  --clr-periwinkle: #7a7ca9;
+  --clr-graphite: #5c5c5e;
+  --clr-obsidian: #08090b;
+  --clr-frost: #b0bbda;
+  --clr-white: #ffffff;
+
+}
 
 
 body {
   font-family: 'Quicksand', sans-serif;
+  background-image: url(../img/imgbg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -24,30 +36,88 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 1em;
 
     .perfil {
       display: flex;
       gap: 1.5em;
+      text-align: center;
 
-      .iconUser {}
+      .iconUser {
+        background: var(--clr-graphite);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr-white);
+        border-radius: 0.4em;
+      }
 
-      .iconPlus {}
+      .iconPlus {
+        background: linear-gradient(135deg, #7a7ca9, #b0bbda);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr-white);
+        border-radius: 0.4em;
+      }
     }
 
     .menu {
-display: flex;
+      display: flex;
       gap: 2em;
+
       & a {
+        color: var(--clr-obsidian);
         font-weight: bold;
       }
     }
 
     .login {
-      & a {
-        
+      display: flex;
+      gap: 1em;
+
+      .logIn {
+        border: 1px solid var(--clr-obsidian);
+        padding: 0.2em 1em;
+        border-radius: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & a {
+          font-weight: bold;
+          color: var(--clr-obsidian);
+        }
+      }
+
+      .signUp {
+        background: var(--clr-periwinkle);
+        padding: 0.2em 1em;
+        border-radius: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & a {
+          font-weight: bold;
+          color: var(--clr-white);
+        }
       }
     }
   }
 }
 
 /*#endregion header*/
+
+/*#region home*/
+
+
+
+/*#endregion home*/
+
+
+
