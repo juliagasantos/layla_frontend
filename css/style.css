@@ -14,8 +14,11 @@
   --clr-periwinkle: #7a7ca9;
   --clr-graphite: #5c5c5e;
   --clr-obsidian: #08090b;
+  --clr-obsidian-transparent: #08090b75;
   --clr-frost: #b0bbda;
   --clr-white: #ffffff;
+  --clr-cardLaylaOne: #9391ffbd;
+  --clr-cardLaylaTwo: #6562fa7c;
 
 }
 
@@ -115,9 +118,68 @@ header {
 
 /*#region home*/
 
+#home {
+  .artworkContainer {
+    .artwork {}
 
+    .cardArtwork {
+      display: flex;
+      gap: 0.8em;
+
+      .cardLaylaOne {
+        position: relative;
+        width: 100px;
+        border-radius: 1.2em;
+
+        img {
+          width: 100px;
+          box-shadow: 0 0 0.5em var(--clr-obsidian-transparent);
+          height: 150px;
+          display: block;
+          border-radius: 1.2em;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, var(--clr-cardLaylaOne), transparent);
+          pointer-events: none;
+          border-radius: 1.2em;
+        }
+      }
+
+      .cardLaylaTwo {
+        position: relative;
+        width: 100px;
+        border-radius: 1.2em;
+        & img {
+          width: 150px;
+          height: auto;
+          border-radius: 1.2em;
+          box-shadow: 0 0 0.4em var(--clr-obsidian-transparent);
+          display: block;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, var(--clr-cardLaylaOne), transparent);
+          pointer-events: none;
+          border-radius: 1.2em;
+        }
+      }
+    }
+
+    .buttonArtwork {}
+  }
+}
 
 /*#endregion home*/
-
-
-
