@@ -36,9 +36,9 @@
   --clr-cardLaylaTwo: #7674b8;
   --clr-transparent: transparent;
   --clr-textTitle: 1.5rem;
-  --clr-surch-card-one: #99b0db;
+  --clr-surch-card-one: rgb(153, 176, 219);
   --clr-surch-card-two: #7691c4;
-  --clr-surch-card-three: #6b749e;
+  --clr-surch-card-three: rgb(107, 116, 158);
   --clr-surch-card-four: #444443;
   --clr-surch-card-five: #ffffff;
 
@@ -46,7 +46,7 @@
 
 
 
-html{
+html {
 
   background-image: url('../img/imgbg.png');
   background-size: cover;
@@ -60,6 +60,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 /*#region header*/
 
 header {
@@ -72,8 +73,8 @@ header {
   height: 7vh;
 
   &.scrolled {
-    background:var(--clr-white-transparent-menu);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: var(--clr-white-transparent-menu);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   & nav {
@@ -159,7 +160,7 @@ header {
 
 /*#region home*/
 
- #home {
+#home {
   all: unset !important;
   padding: 1em !important;
   height: calc(94vh);
@@ -169,7 +170,7 @@ header {
   gap: 5em;
 
   .carouselContainer {
-    padding-top: 6vh;
+    padding-top: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,29 +178,50 @@ header {
     padding-bottom: 4em;
     padding-left: 1em;
     padding-right: 1em;
+    overflow: visible;
 
     #carouselExampleInterval {
       position: relative;
       width: 100%;
       max-width: 1350px;
       border-radius: 2em;
-      overflow: hidden;
+
+      .carousel-inner {
+        overflow: hidden;
+        border-radius: 2em;
+      }
     }
 
     .laylaContainer {
       position: absolute;
-      top: 50%;
-      right: -50px;
+      top: 41%;
+      right: 0;
       transform: translateY(-50%);
       z-index: 10;
       pointer-events: none;
 
       img {
-        max-width: 700px;
+        max-width: 600px;
+        border-radius: 2em;
+
       }
     }
 
+    .gradientOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgb(107, 116, 158), rgba(0, 0, 0, 0));
+      z-index: 15;
+      pointer-events: none;
+      border-radius: 2em;
+    }
+
+
     .carousel-item {
+      position: relative;
       height: 300px;
 
       img {
@@ -208,8 +230,8 @@ header {
         object-fit: cover;
         object-position: center;
         display: block;
-        filter: brightness(50%);
       }
+
     }
 
 
@@ -234,7 +256,8 @@ header {
     align-items: center !important;
     justify-content: center;
     min-height: 400px;
-flex-wrap: wrap;
+    flex-wrap: wrap;
+
     .artworkContainer {
       display: flex;
       flex-direction: column;
