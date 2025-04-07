@@ -31,6 +31,7 @@
   --clr-obsidian-transparent-button: #08090b27;
   --clr-frost: #b0bbda;
   --clr-white: #ffffff;
+  --clr-white-transparent-menu: #ffffffcc;
   --clr-cardLaylaOne: #2f2c75;
   --clr-cardLaylaTwo: #7674b8;
   --clr-transparent: transparent;
@@ -45,18 +46,20 @@
 
 
 
-html,
-body {
-  background-image: url(../img/imgbg.png) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-  font-size: 1rem;
-  height: 100%;
+html{
+
+  background-image: url('../img/imgbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-
+body {
+  all: unset;
+  padding: 0;
+  margin: 0;
+}
 /*#region header*/
 
 header {
@@ -66,7 +69,12 @@ header {
   width: 100%;
   z-index: 100;
   background-color: var(--clr-transparent);
-  height: 6vh;
+  height: 7vh;
+
+  &.scrolled {
+    background:var(--clr-white-transparent-menu);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
 
   & nav {
     display: flex;
@@ -151,7 +159,7 @@ header {
 
 /*#region home*/
 
-#home {
+ #home {
   all: unset !important;
   padding: 1em !important;
   height: calc(94vh);
@@ -671,7 +679,6 @@ flex-wrap: wrap;
       }
     }
   }
-
 }
 
 /*#endregion home*/
